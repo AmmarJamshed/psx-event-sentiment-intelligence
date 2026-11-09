@@ -1,0 +1,1 @@
+"""Sentiment collection and scoring (no fabricated historical scores)."""

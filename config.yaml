@@ -1,0 +1,39 @@
+project:
+  name: psx-event-sentiment-intelligence
+  start_date: "2000-01-01"
+  timezone: Asia/Karachi
+
+market:
+  primary_index: KSE100
+  yahoo_ticker: "^KSE"
+  psx_symbol: KSE100
+  abnormal_z_threshold: 2.5
+  windows: [0, 1, 3, 5, 10, 20]
+  pre_windows: [1]
+
+macro:
+  usdpkr: "PKR=X"
+  oil: "CL=F"
+  gold: "GC=F"
+  sp500: "^GSPC"
+  emerging: "EEM"
+
+sentiment:
+  score_min: -1.0
+  score_max: 1.0
+  use_transformers: false
+  lexicon_fallback: true
+  distinguish_market_news: true
+
+models:
+  test_ratio: 0.2
+  val_ratio: 0.1
+  rolling_window: 756
+  min_train: 504
+  random_state: 42
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  events: data/events
+  output: output

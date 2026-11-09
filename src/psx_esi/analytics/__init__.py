@@ -1,0 +1,1 @@
+"""Market analytics, event study, and feature engineering."""
